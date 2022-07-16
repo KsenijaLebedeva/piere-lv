@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkleHeart</title>
+    <link rel="icon" type="image/png" href="./assets/img/sparkle-black-logo.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
+        <header class="header">
+            <nav class="nav-bar">
+                <div class="nav-bar-logo">
+                    <a href="index.html"> <img class="black-logo" src="./assets/img/sparkle-black-logo.png"></a>
+                </div>
+                <div class="menu-btn">
+                    <a id="add-morecontent" onclick="add_morecontent()"><img src="assets/img/open.png"></a>
+                    <a id="hide-content" onclick="hide_content()"><img src="assets/img/close.png"></a>
+                </div>
+                <div class="nav-middle">
+                    <ul class="nav-middle-list">
+                        <li><a href="ideja.html">Ideja</a></li>
+                        <li><a href="piesaki_sapni.html">Piesaki Sapni</a></li>
+                        <li class="current-page"><a href="uznemejiem.html">Uzņēmējiem</a></li>
+                        <li><a href="sapnu_banka.html">Sapņu banka</a></li>
+                        <li><a href="sapnus_atbalsta.html">Sapņus atbalsta</a></li>
+                        <li><a href="99iedvesmas_stasti.html">99 Iedvesmas stāsti</a></li>
+                    </ul>
+                    <div class="lang-list js-lang-dropdown">
+                        <a class="lang-current js-lang-current" href="#">LV</a>
+                        <ul class="lang-options js-lang-options">
+                            <li class="lang-item">
+                                <a class="lang-link underline active-page" data-lang="LV">LV</a>
+                            </li>
+                            <li class="lang-item">
+                                <a class="lang-link underline" href=404.html data-lang="EN">EN</a>
+                            </li>
+                            <li class="lang-item">
+                                <a class="lang-link underline" href=404.html data-lang="RU">RU</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lang-mobile">
+                        <ul class="lang-mobile-list">
+                            <li class="lang-mobile-item current-page">
+                                <a class="lang-link-mobile " data-lang="LV">LV</a>
+                            </li>
+                            <li class="lang-mobile-item">
+                                <a class="lang-link-mobile" href=404.html data-lang="EN">EN</a>
+                            </li>
+                            <li class="lang-mobile-item">
+                                <a class="lang-link-mobile" href=404.html data-lang="RU">RU</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="uznemejiem-container">
+            <div class="text-container text-main">
+                <p class="h1">uzņēmējiem</p>
+                <p class="text-about text2">Ja ticat labākas pasaules attīstībai un vēlaties piedalīties starptautisku ideju realizēšanā, tad priecāsimies ar Jums iepazīties.</p>
+            </div>
+            <!-- form -->
+            <div class="form-content form-cont-unemejiem">
+                <p class="h-form ">palīdzi īstenot sapni!</p>
+                <form class="form form-unemejiem" onsubmit="filter()">
+
+                    <div class="first-line">
+                        <input class="name form-input" type="text" id="name" required placeholder="Vārds, Uzvārds*">
+                        <input class="email form-input" type="email" id="email" required placeholder="E-pasts*">
+                    </div>
+                    <input class="form-input" type="text" id="company" required placeholder="Uzņēmuma nosaukums*">
+                    <input class="form-input" type="tel" id="pnumber" required placeholder="Telefons*">
+                    <textarea class="textarea" id="contact-message" required placeholder="Jautājums, vai komentārs*"></textarea>
+
+                    <div class="after-form">
+                        <p class="afterform-text1">* obligāti aizpildāmie lauki</p>
+                        <div class="check-content">
+                            <input id="check" class="checkbox" type="checkbox" required>
+                            <label for="check">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
+                        </div>
+                        <button class="submit-button orange" type="submit">Sūtīt</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-div">
+                <div class="footer-components">
+                    <div class="ft-log-wrap">
+                        <img class="logo-gold" src="./assets/img/sparkle-golden-logo.png">
+                        <p class="hidden-info h3">Juris Gogulis</p>
+                    </div>
+                    <div class="column2">
+                        <ul class="column2-list">
+                            <li><a href="ideja.html">Ideja</a></li>
+                            <li><a href="piesaki_sapni.html">Piesaki Sapni</a></li>
+                            <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
+                            <li><a href="sapnu_banka.html">Sapņu banka</a></li>
+                            <li><a href="sapnus_atbalsta.html">Sapņus atbalsta</a></li>
+                            <li><a href="99iedvesmas_stasti.html">Iedvesmas stāsti</a></li>
+                        </ul>
+                        <div class="column3">
+                            <p class="h3">Biedrība SparkleHeart</p>
+                            <ul class="column3-list">
+                                <li>Reģistrācijas nr. 40008293119</li>
+                                <li>Banka: SWEDBANK A/S</li>
+                                <li>LV52HABA0551047652465</li>
+                            </ul>
+                        </div>
+                        <div class="column4">
+                            <p class="column4-h h3">Juris Gogulis</p>
+                            <ul class="column4-list">
+                                <li>juris.gogulis@sparkleheart.org</li>
+                                <li>+37126890034</li>
+                                <li>Biķernieku iela 24a - 5, LV-1006</li>
+                            </ul>
+                            <button class="more-info" onclick="rekveziti()">Skatīt rekvizītus</button>
+                            <div class="rekveziti">
+                                <ul class="column4-list">
+                                    <li>Reģistrācijas nr. 40008293119</li>
+                                    <li>Banka: SWEDBANK A/S</li>
+                                    <li>LV52HABA0551047652465</li>
+                                </ul>
+                            </div>
+                            <div class="footer-img">
+                                <a class="social-link" href="https://www.facebook.com" target="_blank"><img class="fb" src="assets/img/fb-logo.png"></a>
+                                <i class="fb-icon"></i>
+                                <a class="social-link" href="https://www.instagram.com" target="_blank"><img class="insta" src="assets/img/insta-logo.png"></a>
+                                <i class="instagram-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column1">
+                    <div class="column1-content">
+                        <p>© SparkleHeart 2020.</p>
+                        <p class="p2">Visas tiesības aizsargātas.</p>
+                    </div>
+                    <p class="privacy">Privātuma politika</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkleHeart</title>
+    <link rel="icon" type="image/png" href="./assets/img/sparkle-black-logo.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
+        <header class="header">
+            <nav class="nav-bar">
+                <div class="nav-bar-logo">
+                    <a href="index.html"> <img class="black-logo" src="./assets/img/sparkle-black-logo.png"></a>
+                </div>
+                <div class="menu-btn">
+                    <a id="add-morecontent" onclick="add_morecontent()"><img src="assets/img/open.png"></a>
+                    <a id="hide-content" onclick="hide_content()"><img src="assets/img/close.png"></a>
+                </div>
+                <div class="nav-middle">
+                    <ul class="nav-middle-list">
+                        <li><a href="ideja.html">Ideja</a></li>
+                        <li><a href="piesaki_sapni.html">Piesaki Sapni</a></li>
+                        <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
+                        <li><a href="sapnu_banka.html">Sapņu banka</a></li>
+                        <li><a href="sapnus_atbalsta.html">Sapņus atbalsta</a></li>
+                        <li class="current-page"><a href="99iedvesmas_stasti.html">99 Iedvesmas stāsti</a></li>
+                    </ul>
+                    <div class="lang-list js-lang-dropdown">
+                        <a class="lang-current js-lang-current" href="#">LV</a>
+                        <ul class="lang-options js-lang-options">
+                            <li class="lang-item">
+                                <a class="lang-link underline active-page" data-lang="LV">LV</a>
+                            </li>
+                            <li class="lang-item">
+                                <a class="lang-link underline" href=404.html data-lang="EN">EN</a>
+                            </li>
+                            <li class="lang-item">
+                                <a class="lang-link underline" href=404.html data-lang="RU">RU</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lang-mobile">
+                        <ul class="lang-mobile-list">
+                            <li class="lang-mobile-item current-page">
+                                <a class="lang-link-mobile " data-lang="LV">LV</a>
+                            </li>
+                            <li class="lang-mobile-item">
+                                <a class="lang-link-mobile" href=404.html data-lang="EN">EN</a>
+                            </li>
+                            <li class="lang-mobile-item">
+                                <a class="lang-link-mobile" href=404.html data-lang="RU">RU</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="iedvesmas-stasti-container">
+            <div class="text-container">
+                <p class="h1">99 iedvesmas stāsti</p>
+                <p class="ideja-text text1">Atklāj kādu no 99 aizraujošajiem stāstiem</p>
+            </div>
+            <div id="modal">
+                <button id="vidbutton" onclick="playvideo();"><img src="assets/img/cirkle.png"></button>
+                <video id="video" poster="./assets/img/BR MEITA 1.png">
+                        <source src="./assets/video/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                    </video>
+                <span id="modal-close" class="close" onclick="stopvideo();"><img src="./assets/img/clode-video.png"></span>
+                <p>Arta Balode</p>
+            </div>
+            <div class="stories-container">
+                <div id="modal-overlay"></div>
+                <div class="stories-list">
+                    <ul class="stories">
+                        <li>
+                            <img src="./assets/img/1.jpg" alt="1">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>1</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/2.jpg" alt="2">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>2</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/3.jpg" alt="3">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>3</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/4.jpg" alt="4">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>4</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/gold-bg.png" alt="5">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <h5>Arta<br>Balode</h5>
+                                <p>5</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/6.jpg" alt="6">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>6</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/7.jpg" alt="7">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>7</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/8.jpg" alt="8">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>8</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/9.jpg" alt="9">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>9</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/10.jpg" alt="10">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>10</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/11.jpg" alt="11">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>11</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/12.jpg" alt="12">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>12</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/13.jpg" alt="13">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>13</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/14.jpg" alt="14">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>14</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/15.jpg" alt="15">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>15</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/16.jpg" alt="16">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>16</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/17.jpg" alt="17">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>17</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/gold-bg.png" alt="18">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <h6>Jauns stāsts tiks pievienots drīzumā</h6>
+                                <p>18</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/gold-bg.png" alt="19">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>19</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/img/gold-bg.png" alt="20">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>20</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="21">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>21</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="22">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>22</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="23">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>23</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="24">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>24</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="25">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>25</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="26">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>26</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="27">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>27</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="28">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>28</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="29">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>29</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="30">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>30</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="31">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>31</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="32">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>32</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="33">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>33</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="34">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>34</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="35">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>35</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="36">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>36</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="37">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>37</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="38">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>38</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="39">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>39</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="40">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>40</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="41">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>41</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="42">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>42</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="43">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>43</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="44">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>44</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="45">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>45</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="46">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>46</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="47">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>47</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="48">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>48</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="49">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>49</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="50">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>50</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="51">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>51</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="52">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>52</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="53">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>53</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="54">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>54</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="55">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>55</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="56">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>56</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="57">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>57</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="58">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>58</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="59">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>59</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="60">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>60</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="61">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>61</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="62">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>62</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="63">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>63</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="64">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>64</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="65">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>65</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="66">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>66</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="67">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>67</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="68">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>68</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="69">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>69</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="70">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>70</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="71">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>71</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="72">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>72</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="73">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>73</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="74">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>74</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="75">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>75</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="76">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>76</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="77">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>77</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="78">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>78</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="79">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>79</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="80">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>80</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="81">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>81</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="82">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>82</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="83">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>83</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="84">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>84</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="85">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>85</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="86">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>86</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="87">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>87</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="88">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>88</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="89">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>89</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="90">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>90</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="91">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>91</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="92">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>92</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="93">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>93</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="94">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>94</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="95">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>95</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="96">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>96</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="97">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>97</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="98">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>98</p>
+                            </div>
+                        </li>
+                        <li class="hidden-stories">
+                            <img src="./assets/img/gold-bg.png" alt="99">
+                            <div class="stories-list-decor">
+                                <button class="modal-button"></button>
+                                <p>99</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="cont-1 more-info-stories">
+                <a class="buttons-mid-btn orange more-stories" onclick="morestories();">Skatīt vairāk</a>
+            </div>
+
+
+            <div class="text-container team-h">
+                <h2 class="h2">sparkle heart komanda</h2>
+                <p class="text2">Radošā komanda, kura strādā ar projektu 99 un starptautiskām Sparkle Heart īsfilmām.
+                </p>
+            </div>
+            <div class="team">
+                <ul>
+                    <li>
+                        <div><img src="./assets/img/9877fbc1-1605-4322-9e06-f90dba39e238 1.jpg" alt="Juris Gogulis"></div>
+                        <div class="team-img-decor"></div>
+                        <div class="team-img-text">
+                            <h4>Juris Gogulis</h4>
+                            <p>Idejas ģenerators un režisors</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team-img"><img src="./assets/img/girts-ny-1 1.jpg" alt="Ģirts Ceriņš"></div>
+                        <div class="team-img-decor"></div>
+                        <div class="team-img-text">
+                            <h4>Ģirts Ceriņš</h4>
+                            <p>Operators un montāžas speciālists</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="./assets/img/IMG-5556 1.jpg" alt="Jānis Zurģis"></div>
+                        <div class="team-img-decor"></div>
+                        <div class="team-img-text">
+                            <h4>Jānis Zurģis</h4>
+                            <p>Animācijas un grafiskā dizaina meistars</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-div">
+                <div class="footer-components">
+                    <div class="ft-log-wrap">
+                        <img class="logo-gold" src="./assets/img/sparkle-golden-logo.png">
+                        <p class="hidden-info h3">Juris Gogulis</p>
+                    </div>
+                    <div class="column2">
+                        <ul class="column2-list">
+                            <li><a href="ideja.html">Ideja</a></li>
+                            <li><a href="piesaki_sapni.html">Piesaki Sapni</a></li>
+                            <li><a href="uznemejiem.html">Uzņēmējiem</a></li>
+                            <li><a href="sapnu_banka.html">Sapņu banka</a></li>
+                            <li><a href="sapnus_atbalsta.html">Sapņus atbalsta</a></li>
+                            <li><a href="99iedvesmas_stasti.html">Iedvesmas stāsti</a></li>
+                        </ul>
+                        <div class="column3">
+                            <p class="h3">Biedrība SparkleHeart</p>
+                            <ul class="column3-list">
+                                <li>Reģistrācijas nr. 40008293119</li>
+                                <li>Banka: SWEDBANK A/S</li>
+                                <li>LV52HABA0551047652465</li>
+                            </ul>
+                        </div>
+                        <div class="column4">
+                            <p class="column4-h h3">Juris Gogulis</p>
+                            <ul class="column4-list">
+                                <li>juris.gogulis@sparkleheart.org</li>
+                                <li>+37126890034</li>
+                                <li>Biķernieku iela 24a - 5, LV-1006</li>
+                            </ul>
+                            <button class="more-info" onclick="rekveziti()">Skatīt rekvizītus</button>
+                            <div class="rekveziti">
+                                <ul class="column4-list">
+                                    <li>Reģistrācijas nr. 40008293119</li>
+                                    <li>Banka: SWEDBANK A/S</li>
+                                    <li>LV52HABA0551047652465</li>
+                                </ul>
+                            </div>
+                            <div class="footer-img">
+                                <a class="social-link" href="https://www.facebook.com" target="_blank"><img class="fb" src="assets/img/fb-logo.png"></a>
+                                <i class="fb-icon"></i>
+                                <a class="social-link" href="https://www.instagram.com" target="_blank"><img class="insta" src="assets/img/insta-logo.png"></a>
+                                <i class="instagram-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column1">
+                    <div class="column1-content">
+                        <p>© SparkleHeart 2020.</p>
+                        <p class="p2">Visas tiesības aizsargātas.</p>
+                    </div>
+                    <p class="privacy">Privātuma politika</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/theme.js"></script>
+</body>
+
+</html>
