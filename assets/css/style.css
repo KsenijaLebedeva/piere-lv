@@ -121,6 +121,7 @@ p {
 .current-page a,
 .lang-mobile-item a:hover {
     text-decoration: underline #ffa800 4px !important;
+    -webkit-text-decoration-line: underline #ffa800 4px !important;
     text-underline-position: under;
     text-underline-offset: 2px;
     font-weight: 600 !important;
@@ -339,6 +340,8 @@ p {
     }
     .nav-middle-list {
         margin: 0 auto;
+        margin-left: 0;
+        padding-left: 0;
         display: none;
         flex-direction: column;
         order: 2;
@@ -360,7 +363,7 @@ p {
     .lang-list {
         margin-top: 109px;
         margin-bottom: 80px;
-        display: inline-flex;
+        display: inline-flex
     }
     .lang-options {
         margin: auto;
@@ -389,6 +392,9 @@ p {
         line-height: 29px;
         text-align: center;
         color: #000000;
+    }
+    .lang-mobile-list {
+        padding-left: 0;
     }
     .select-lang {
         position: relative;
@@ -442,9 +448,10 @@ p {
         width: 10px;
     }
     .nav-middle-list {
-        margin: 10px auto 8px;
+        margin: 10px auto 8px auto;
     }
     .nav-middle-list li {
+        margin: auto;
         margin-top: -50px;
         margin-bottom: 9px;
         font-size: 18px;
@@ -460,7 +467,7 @@ p {
     .nav-middle {
         top: 48px;
         margin-top: -10px;
-        padding: 10px 35px;
+        padding: 10px 0px;
         z-index: 110;
         height: 528px;
         background-color: #fff;
@@ -592,6 +599,7 @@ p {
     width: 100%;
     height: 60px;
     background: url(../img/ripped-line.png);
+    background: url(../img/ripped-line.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1408,6 +1416,10 @@ p {
 }
 
 @media (max-width: 767px) {
+    .piesaki-sapni-container .text-container {
+        padding-top: 110px;
+        padding-bottom: 0;
+    }
     .piesaki-sapni-container .text1 {
         padding-top: 25px;
         font-size: 14px;
@@ -1415,7 +1427,7 @@ p {
     }
     .buttons-piesaki {
         padding: 0;
-        margin-top: -280px;
+        margin-top: -15px;
         max-width: 320px;
     }
     .buttons-piesaki .cont-1,
@@ -1455,7 +1467,8 @@ p {
         z-index: 3;
     }
     .img-piesaki-sapni::after {
-        bottom: -10px;
+        bottom: -13px;
+        height: 100px;
     }
     .img-piesaki-sapni .img-wrap {
         margin-top: 0;
@@ -1519,6 +1532,7 @@ p {
     font-weight: 500;
     color: #fff !important;
     background-image: url(../img/footer-bg.png);
+    background-image: url(../img/footer-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
