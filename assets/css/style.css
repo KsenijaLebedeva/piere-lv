@@ -121,10 +121,11 @@ p {
 .current-page a,
 .lang-mobile-item a:hover {
     text-decoration: underline #ffa800 4px !important;
-    -webkit-text-decoration-line: underline #ffa800 4px !important;
-    text-decoration-line: underline #ffa800 4px !important;
+    -webkit-text-decoration: underline #ffa800 4px !important;
     text-underline-position: under;
+    -webkit-text-underline-position: under;
     text-underline-offset: 2px;
+    -webkit-text-underline-offset: 2px;
     font-weight: 600 !important;
 }
 
