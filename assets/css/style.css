@@ -2965,6 +2965,7 @@ video {
     }
     .bg-logo-rainbow p {
         max-width: 608px !important;
+        padding-bottom: 200px;
     }
     .sapnu-banka-container .buttons-container {
         margin-bottom: -110px;
@@ -2977,16 +2978,14 @@ video {
 
 @media (max-width: 767px) {
     .sapnu-bg {
-        margin-top: -320px;
+        margin-top: -445px;
         padding-top: 0;
         background-position: center center;
-        max-height: 769px;
-        min-height: 180px;
-        background-size: cover;
+        background-size: 100% auto;
     }
     .goals {
         margin: auto;
-        padding-top: 120px;
+        padding-top: 0px;
         display: flex;
         justify-content: center;
     }
