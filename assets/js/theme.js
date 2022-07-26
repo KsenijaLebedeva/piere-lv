@@ -335,14 +335,18 @@ $(document).ready(function() {
                 .css('display', 'block')
                 .animate({ opacity: 1 }, 198);
         });
+        $('#video').css('display', 'flex');
     });
 
     $('#modal-close, #modal-overlay').click(function() {
         $('#modal').animate({ opacity: 0 }, 198,
             function() {
                 $(this).css('display', 'none');
+
                 $('#modal-overlay').fadeOut(297);
             });
+        $('#modal').css('display', 'none');
+        $('#video').css('display', 'none');
     });
     /* footer rekveziti */
     $(".column1").css("padding-top", "0px");
