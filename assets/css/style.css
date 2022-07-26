@@ -1309,6 +1309,10 @@ p {
     color: #2F4858;
 }
 
+.piesaki-sapni-container {
+    padding-top: 15px;
+}
+
 .cont img {
     margin: auto;
     width: 160px;
@@ -1332,11 +1336,11 @@ p {
 }
 
 .buttons-piesaki .cont-1 a {
-    margin-top: 150px;
+    margin-top: 140px;
 }
 
 .buttons-piesaki .cont-2 a {
-    margin-top: 65px;
+    margin-top: 57px;
 }
 
 .buttons-piesaki .h2 {
@@ -1351,7 +1355,7 @@ p {
 }
 
 .form-piesaki-sapni {
-    padding-top: 160px;
+    padding-top: 170px;
     padding-bottom: 230px;
 }
 
@@ -1360,6 +1364,9 @@ p {
 }
 
 @media (max-width: 1365px) {
+    .piesaki-sapni-container .text-container {
+        padding-top: 160px;
+    }
     .piesaki-sapni-container .text1 {
         padding-top: 46px;
     }
@@ -1418,7 +1425,7 @@ p {
 
 @media (max-width: 767px) {
     .piesaki-sapni-container .text-container {
-        padding-top: 110px;
+        padding-top: 95px;
         padding-bottom: 0;
     }
     .piesaki-sapni-container .text1 {
@@ -1427,20 +1434,30 @@ p {
         line-height: 17px;
     }
     .buttons-piesaki {
+        justify-content: center;
         padding: 0;
+        margin: auto;
         margin-top: -15px;
         max-width: 320px !important;
     }
     .buttons-piesaki .cont-1,
     .buttons-piesaki .cont-2 {
-        justify-self: center;
-        margin: auto;
+        position: relative !important;
+        justify-self: center !important;
+        justify-content: center !important;
+        margin: auto !important;
         padding-right: 0 !important;
-        width: 300px;
-        max-width: 320px !important;
+        padding-left: 0 !important;
+        max-width: 200px !important;
+    }
+    .buttons-piesaki a {
+        margin-left: -20px;
     }
     .buttons-piesaki .cont-1 a {
         margin-top: 50px;
+    }
+    .buttons-piesaki .cont-2 img {
+        margin-left: 40px;
     }
     .buttons-piesaki .h2 {
         padding: 0;
@@ -1455,7 +1472,7 @@ p {
         margin-left: 0;
         padding-left: 0;
         display: flex;
-        max-width: 280px;
+        max-width: 280px !important;
         font-size: 12px;
         line-height: 15px;
     }
@@ -1466,7 +1483,7 @@ p {
         margin-top: -50px;
     }
     .img-piesaki-sapni::before {
-        margin-top: -20px;
+        margin-top: -23px;
         height: 100px;
         z-index: 3;
     }
@@ -1987,6 +2004,11 @@ p {
     align-items: flex-end;
 }
 
+.stories li img {
+    width: 160px;
+    height: 160px;
+}
+
 #vidbutton {
     position: absolute;
     margin: auto;
@@ -2179,6 +2201,7 @@ video {
     z-index: 40;
     text-align: center;
     z-index: 31;
+    margin: auto;
 }
 
 .team-img-text p {
@@ -2220,7 +2243,8 @@ video {
         max-width: 780px;
     }
     .stories li,
-    .stories-list-decor {
+    .stories-list-decor,
+    .stories li img {
         width: 142.69px;
         height: 142.69px;
     }
@@ -2258,7 +2282,7 @@ video {
     }
     .team-img-text {
         padding: 0;
-        margin: auto 40px 25px 40px;
+        margin: auto auto 25px auto;
     }
     .team-img-text h4 {
         font-size: 24px;
@@ -2354,7 +2378,8 @@ video {
         width: 134px;
         height: 134px;
     }
-    .stories-list-decor {
+    .stories-list-decor,
+    .stories li img {
         width: 134px;
         height: 134px;
     }
@@ -2954,7 +2979,10 @@ video {
     .sapnu-bg {
         margin-top: -320px;
         padding-top: 0;
-        height: 180px;
+        background-position: center center;
+        max-height: 769px;
+        min-height: 180px;
+        background-size: cover;
     }
     .goals {
         margin: auto;
